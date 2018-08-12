@@ -5,19 +5,26 @@
   
 
   
-  <title>第二篇博客 | LT&#39; Blog</title>
+  <title>HTTP | LT&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天是八月十号，我开通这个博客的日子。在此鼓励自己：少玩手机，少玩电脑，把时间用在学习上。这是个关乎一辈子的事情。">
+  <meta name="description" content="HTTP请求HTTP请求由四个部分组成，格式如下    1 动词 路径 协议/版本   2 key1: value1   2 key2: value1   2 key3: value1   2 Content-Type: application/x-www-form-urlencoded   2 Host: www.baidu.com   2 User-Agent: curl/7.54.0   3">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二篇博客">
+<meta property="og:title" content="HTTP">
 <meta property="og:url" content="http://yoursite.com/2018/08/10/第二篇博客/index.html">
 <meta property="og:site_name" content="LT&#39; Blog">
-<meta property="og:description" content="今天是八月十号，我开通这个博客的日子。在此鼓励自己：少玩手机，少玩电脑，把时间用在学习上。这是个关乎一辈子的事情。">
+<meta property="og:description" content="HTTP请求HTTP请求由四个部分组成，格式如下    1 动词 路径 协议/版本   2 key1: value1   2 key2: value1   2 key3: value1   2 Content-Type: application/x-www-form-urlencoded   2 Host: www.baidu.com   2 User-Agent: curl/7.54.0   3">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-10T09:50:43.063Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/network.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/http3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/HTTP4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/network.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/http3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/HTTP5.png">
+<meta property="og:updated_time" content="2018-08-12T13:25:36.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二篇博客">
-<meta name="twitter:description" content="今天是八月十号，我开通这个博客的日子。在此鼓励自己：少玩手机，少玩电脑，把时间用在学习上。这是个关乎一辈子的事情。">
+<meta name="twitter:title" content="HTTP">
+<meta name="twitter:description" content="HTTP请求HTTP请求由四个部分组成，格式如下    1 动词 路径 协议/版本   2 key1: value1   2 key2: value1   2 key3: value1   2 Content-Type: application/x-www-form-urlencoded   2 Host: www.baidu.com   2 User-Agent: curl/7.54.0   3">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/network.png">
   
     <link rel="alternate" href="/atom.xml" title="LT&#39; Blog" type="application/atom+xml">
   
@@ -78,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      第二篇博客
+      HTTP
     </h1>
   
 
@@ -86,12 +93,75 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>今天是八月十号，我开通这个博客的日子。在此鼓励自己：少玩手机，少玩电脑，把时间用在学习上。这是个关乎一辈子的事情。</p>
+        <h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><p>HTTP请求由四个部分组成，格式如下  </p>
+<ul>
+<li>1 动词 路径 协议/版本  </li>
+<li>2 key1: value1  </li>
+<li>2 key2: value1  </li>
+<li>2 key3: value1  </li>
+<li>2 Content-Type: application/x-www-form-urlencoded  </li>
+<li>2 Host: <a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a>  </li>
+<li>2 User-Agent: curl/7.54.0  </li>
+<li>3  </li>
+<li>4 要上传的数据  <blockquote>
+<ol>
+<li>前三个部分是一定有的，有没有第四部分取决于有没有需要上传数据.  </li>
+<li>第三部分永远都是一个回车，作用是把第二部分和第四部分区分开.</li>
+<li>动词有 GET（获取） POST（新增或上传） PUT（整体更新） PATCH（局部更新） DELETE（删除） HEAD OPTIONS 等.</li>
+<li>路径包含[查询参数]但不包含[锚点].</li>
+<li>如果没有写路径，，默认路径为’/‘.</li>
+<li>第 2 部分中的 Content-Type 标注了第 4 部分的格式.</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="如何用Chrome开发者工具查看-HTTP-请求内容"><a href="#如何用Chrome开发者工具查看-HTTP-请求内容" class="headerlink" title="如何用Chrome开发者工具查看 HTTP 请求内容"></a>如何用Chrome开发者工具查看 HTTP 请求内容</h3><ol>
+<li>在任意Chrom页面按下”Ctrl+Shift+i”，进入如下页面,点击”Network”<br><img src="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/network.png" alt="network"></li>
+<li>在上方地址栏输入任意网址并进入，得到如下结果，选择并点击第一个’GET请求’<br><img src="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/http3.png" alt="get"></li>
+<li>展开右侧的’Headers’下的’Request Hearders’,<strong>点击旁边的’view source’</strong>,<br><img src="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/HTTP4.png" alt="view source">  </li>
+<li>然后我们就能看到这个请求的前三部分内容了。  </li>
+<li>如果有请求的第四部分，那么在 FormData 或 Payload 里面可以看到  </li>
+</ol>
+<hr>
+<h3 id="HTTP响应"><a href="#HTTP响应" class="headerlink" title="HTTP响应"></a>HTTP响应</h3><p>HTTP响应由四部分组成，格式如下</p>
+<ul>
+<li>1 协议/版本号 状态码 状态解释  </li>
+<li>2 key1: value1  </li>
+<li>2 key2: value1  </li>
+<li>2 key3: value1  </li>
+<li>2 Content-Length: xxxxx  </li>
+<li>2 Content-Type: text/html    </li>
+<li>3  </li>
+<li>4 要下载的内容  <blockquote>
+<ol>
+<li>状态码是服务器对浏览器的回应，表示服务器当前响应状态。</li>
+<li>第 2 部分中的 Content-Length 标注了第 4 部分大小</li>
+<li>第 2 部分中的 Content-Type 标注了第 4 部分的格式</li>
+<li>第 2 部分中的 Content-Type 遵循 MIME 规范</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h3 id="如何用Chrome开发者工具查看-HTTP-响应内容"><a href="#如何用Chrome开发者工具查看-HTTP-响应内容" class="headerlink" title="如何用Chrome开发者工具查看 HTTP 响应内容"></a>如何用Chrome开发者工具查看 HTTP 响应内容</h3><ol>
+<li>在任意Chrom页面按下”Ctrl+Shift+i”，进入如下页面,点击”Network”<br><img src="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/network.png" alt="network"></li>
+<li>在上方地址栏输入任意网址并进入，得到如下结果，选择并点击第一个’GET请求’<br><img src="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/http3.png" alt="get"></li>
+<li>展开右侧的’Headers’下的’Response Headers’，<strong>点击旁边的’view source’</strong>,<br><img src="https://raw.githubusercontent.com/fruittooth/blog-generator/master/images/http/HTTP5.png" alt=""></li>
+<li>然后我们就能看到这个响应的内容了</li>
+</ol>
+<h3 id="‘curl’命令"><a href="#‘curl’命令" class="headerlink" title="‘curl’命令"></a>‘curl’命令</h3><p>‘curl’命令可以通过命令行的方式,执行Http请求。通过curl命令，我们可以进行Http请求，访问页面，并且可以通过增加命令参数查看到请求和对应响应的详细内容。</p>
+<ul>
+<li>访问指定页面时比如百度首页: curl – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></li>
+<li>查看详细的请求和响应内容: curl -v –”<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></li>
+<li>默认请求方式为’GET’,需要修改为其他方式，如’POST’: curl -v -x POST – “<a href="https://www.baidu.com&quot;,请求方式必须大写" target="_blank" rel="noopener">https://www.baidu.com&quot;,请求方式必须大写</a></li>
+<li>在’HTTP header’添加信息；curl -H ‘xxxxxxxx’ – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></li>
+<li>向服务器上传数据:curl -d “aaaaaaaaaa” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></li>
+<li>当我们想通过POST向服务器上传数据并查看详细的请求和响应内容时使用命令:curl -x POST -v -d “aaaaaaa” – “<a href="https://www.baidu.com&quot;" target="_blank" rel="noopener">https://www.baidu.com&quot;</a></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/10/第二篇博客/" data-id="cjkqmboxh0003qgrjk7ffpeh3" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/08/10/第二篇博客/" data-id="cjkqvu96x0003fgrjx2pzxtoo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -153,7 +223,7 @@
           </li>
         
           <li>
-            <a href="/2018/08/10/第二篇博客/">第二篇博客</a>
+            <a href="/2018/08/10/第二篇博客/">HTTP</a>
           </li>
         
           <li>
